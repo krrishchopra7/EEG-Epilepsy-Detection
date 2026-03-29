@@ -1,8 +1,8 @@
 # EEG Epilepsy Detection
 
-This repository contains my work on epileptic seizure detection from EEG signals using both classical machine learning models and a graph-based deep learning approach.
+This repository contains our work on epileptic seizure detection from EEG signals using both classical machine learning models and a graph-based deep learning approach.
 
-The goal of the project is to compare how different modeling strategies behave on EEG classification tasks, including 2-class, 3-class, and 5-class setups. I used notebooks so the full pipeline stays easy to follow, from loading data and preprocessing to training, evaluation, and visualizing results.
+The goal of the project is to compare how different modeling strategies behave on EEG classification tasks, including 2-class, 3-class, and 5-class setups. We used notebooks so the full pipeline stays easy to follow, from loading data and preprocessing to training, evaluation, and visualizing results.
 
 ## What's in the repo
 
@@ -10,7 +10,7 @@ The goal of the project is to compare how different modeling strategies behave o
   A notebook that experiments with multiple baseline models including SVM, Random Forest, XGBoost, and MLP. It covers preprocessing, training, evaluation metrics, confusion matrices, and summary comparisons across different classification settings.
 
 - `Epilepsy_GAT.ipynb`
-  A graph attention network based approach for EEG epilepsy detection. This notebook explores a deeper learning setup where EEG samples are handled in a graph-style modeling pipeline instead of only standard tabular ML methods.
+  Our proposed model. This notebook implements a Graph Attention Network (GAT) based approach for EEG epilepsy detection and explores how graph-based deep learning can capture relationships in EEG data beyond standard tabular baselines.
 
 ## Project workflow
 
@@ -34,9 +34,24 @@ From the baseline notebook, the reported accuracies are:
 
 These results suggest that the simpler classification settings are much easier to separate, while the full 5-class problem is noticeably more challenging.
 
-## Why I built this
+## Proposed model: GAT
 
-I wanted to explore epilepsy detection from more than one angle instead of stopping at a single model. The classical models give a strong baseline and are easier to interpret, while the GAT notebook lets me test whether graph-based deep learning can capture richer structure in EEG data.
+The GAT notebook is our proposed model for this project. Instead of relying only on handcrafted tabular features and standard classifiers, it uses a graph-based deep learning approach to model richer structure in EEG data.
+
+Based on the evaluation saved in the notebook, the proposed GAT model reports:
+
+| Metric | Value |
+| --- | ---: |
+| Accuracy | 0.95 |
+| Precision (macro avg) | 0.95 |
+| Recall (macro avg) | 0.94 |
+| F1-score (macro avg) | 0.95 |
+
+The classification report in the notebook was generated on 100 test samples and shows strong performance across both classes, making the GAT model one of the key outcomes of this project.
+
+## Why we built this
+
+We wanted to explore epilepsy detection from more than one angle instead of stopping at a single model. The classical models give strong baselines and are easier to interpret, while the GAT notebook lets us test whether graph-based deep learning can capture richer structure in EEG data.
 
 ## Running the notebooks
 
@@ -60,6 +75,9 @@ To work with this project locally:
 - Document the dataset source and folder structure more clearly.
 - Add a dedicated results section with saved figures and model comparisons.
 
-## Author
+## Contributors
 
-Krrish Chopra
+- Krrish Chopra
+- Sanket
+- Ronit
+- Navprabhat
