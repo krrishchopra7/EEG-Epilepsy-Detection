@@ -24,14 +24,14 @@ The notebooks follow a practical end-to-end workflow:
 
 ## Current result snapshot
 
-The table below gives a single comparison view with the experiment setup in rows and the models in columns. GAT is included as our proposed model based on the saved notebook evaluation.
+The table below compares accuracy across the main experiments. GAT is included as our proposed model based on the saved notebook evaluation.
 
 | Experiment | SVM | Random Forest | XGBoost | MLP | GAT (Proposed) |
-| --- | --- | --- | --- | --- | --- |
-| 2-Class | Acc 0.96, Prec 0.96, Rec 0.95, F1 0.96 | Acc 0.94, Prec 0.94, Rec 0.93, F1 0.94 | Acc 0.92, Prec 0.92, Rec 0.91, F1 0.92 | Acc 0.93, Prec 0.94, Rec 0.92, F1 0.93 | Not reported in this format |
-| 3-Class | Acc 0.92, Prec 0.91, Rec 0.93, F1 0.92 | Acc 0.86, Prec 0.86, Rec 0.83, F1 0.84 | Acc 0.84, Prec 0.86, Rec 0.80, F1 0.82 | Acc 0.87, Prec 0.87, Rec 0.87, F1 0.87 | Not reported in this format |
-| 5-Class | Acc 0.69, Prec 0.69, Rec 0.69, F1 0.68 | Acc 0.58, Prec 0.59, Rec 0.58, F1 0.58 | Acc 0.58, Prec 0.58, Rec 0.58, F1 0.58 | Acc 0.60, Prec 0.59, Rec 0.60, F1 0.58 | Not reported in this format |
-| Notebook evaluation | Not reported in this format | Not reported in this format | Not reported in this format | Not reported in this format | Acc 0.95, Prec 0.95, Rec 0.94, F1 0.95 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2-Class | 96% | 94% | 92% | 93% | - |
+| 3-Class | 92% | 86% | 84% | 87% | - |
+| 5-Class | 69% | 58% | 58% | 60% | - |
+| Notebook evaluation | - | - | - | - | 95% |
 
 These results suggest that the simpler classification settings are much easier to separate, while the full 5-class problem is noticeably more challenging. The proposed GAT model also shows strong performance in its saved evaluation results.
 
