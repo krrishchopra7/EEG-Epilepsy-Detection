@@ -28,10 +28,9 @@ The table below compares accuracy across the main experiments. GAT is included a
 
 | Experiment | SVM | Random Forest | XGBoost | MLP | GAT (Proposed) |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| 2-Class | 96% | 94% | 92% | 93% | - |
-| 3-Class | 92% | 86% | 84% | 87% | - |
-| 5-Class | 69% | 58% | 58% | 60% | - |
-| Notebook evaluation | - | - | - | - | 95% |
+| 2-Class | 96% | 94% | 92% | 93% | 95% |
+| 3-Class | 92% | 86% | 84% | 87% | 95% |
+| 5-Class | 69% | 58% | 58% | 60% | 77% |
 
 These results suggest that the simpler classification settings are much easier to separate, while the full 5-class problem is noticeably more challenging. The proposed GAT model also shows strong performance in its saved evaluation results.
 
