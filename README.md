@@ -24,30 +24,25 @@ The notebooks follow a practical end-to-end workflow:
 
 ## Current result snapshot
 
-From the baseline notebook, the reported accuracies are:
+The table below gives a single comparison view of the main results from the notebooks. The classical models are reported across 2-class, 3-class, and 5-class experiments, while GAT is included as our proposed model with the metrics saved in its evaluation notebook.
 
-| Experiment | SVM | Random Forest | XGBoost | MLP |
-| --- | ---: | ---: | ---: | ---: |
-| 2-Class | 0.96 | 0.94 | 0.92 | 0.93 |
-| 3-Class | 0.92 | 0.86 | 0.84 | 0.87 |
-| 5-Class | 0.69 | 0.58 | 0.58 | 0.60 |
+| Model | Experiment | Accuracy | Precision | Recall | F1-score |
+| --- | --- | ---: | ---: | ---: | ---: |
+| SVM | 2-Class | 0.96 | 0.96 | 0.95 | 0.96 |
+| SVM | 3-Class | 0.92 | 0.91 | 0.93 | 0.92 |
+| SVM | 5-Class | 0.69 | 0.69 | 0.69 | 0.68 |
+| Random Forest | 2-Class | 0.94 | 0.94 | 0.93 | 0.94 |
+| Random Forest | 3-Class | 0.86 | 0.86 | 0.83 | 0.84 |
+| Random Forest | 5-Class | 0.58 | 0.59 | 0.58 | 0.58 |
+| XGBoost | 2-Class | 0.92 | 0.92 | 0.91 | 0.92 |
+| XGBoost | 3-Class | 0.84 | 0.86 | 0.80 | 0.82 |
+| XGBoost | 5-Class | 0.58 | 0.58 | 0.58 | 0.58 |
+| MLP | 2-Class | 0.93 | 0.94 | 0.92 | 0.93 |
+| MLP | 3-Class | 0.87 | 0.87 | 0.87 | 0.87 |
+| MLP | 5-Class | 0.60 | 0.59 | 0.60 | 0.58 |
+| GAT (Proposed) | Notebook evaluation | 0.95 | 0.95 | 0.94 | 0.95 |
 
-These results suggest that the simpler classification settings are much easier to separate, while the full 5-class problem is noticeably more challenging.
-
-## Proposed model: GAT
-
-The GAT notebook is our proposed model for this project. Instead of relying only on handcrafted tabular features and standard classifiers, it uses a graph-based deep learning approach to model richer structure in EEG data.
-
-Based on the evaluation saved in the notebook, the proposed GAT model reports:
-
-| Metric | Value |
-| --- | ---: |
-| Accuracy | 0.95 |
-| Precision (macro avg) | 0.95 |
-| Recall (macro avg) | 0.94 |
-| F1-score (macro avg) | 0.95 |
-
-The classification report in the notebook was generated on 100 test samples and shows strong performance across both classes, making the GAT model one of the key outcomes of this project.
+These results suggest that the simpler classification settings are much easier to separate, while the full 5-class problem is noticeably more challenging. The proposed GAT model also shows strong performance in its saved evaluation results.
 
 ## Why we built this
 
